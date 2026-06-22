@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>NovaStore</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- Loader -->
+<div id="loader">
+    <div class="spinner"></div>
+</div>
+
+<!-- Header -->
+<header class="header">
+    <div class="container nav">
+
+        <div class="logo">
+            Nova<span>Store</span>
+        </div>
+
+        <nav>
+            <a href="#hero">Home</a>
+            <a href="#products">Products</a>
+        </nav>
+
+        <div class="cart">
+            🛒 <span id="cartCount">0</span>
+        </div>
+
+    </div>
+</header>
+
+<!-- Hero -->
+<section class="hero" id="hero">
+    <h1>Premium Product Store</h1>
+    <p>Discover Amazing Products At Affordable Prices</p>
+</section>
+
+<!-- Search + Sort -->
+<section class="controls container">
+
+    <input
+        type="text"
+        id="search"
+        placeholder="Search products..."
+    >
+
+    <select id="sort">
+        <option value="default">Sort Products</option>
+        <option value="name-asc">Name A-Z</option>
+        <option value="name-desc">Name Z-A</option>
+        <option value="price-low">Price Low</option>
+        <option value="price-high">Price High</option>
+        <option value="rating">Rating</option>
+    </select>
+
+</section>
+
+<!-- Products -->
+<main class="container" id="products">
+    <div id="grid" class="grid"></div>
+</main>
+
+<!-- Modal -->
+<div id="modal" class="modal">
+
+    <div class="modal-box">
+
+        <button id="close">← Back</button>
+
+        <img id="mImg">
+
+        <h2 id="mTitle"></h2>
+
+        <p id="mCat"></p>
+
+        <p id="mDesc"></p>
+
+        <div class="row">
+            <span id="mPrice"></span>
+            <span id="mRate"></span>
+        </div>
+
+        <button id="buyNowModal" class="buy">
+            Buy Now
+        </button>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
